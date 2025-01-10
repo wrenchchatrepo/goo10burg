@@ -1,4 +1,5 @@
 import os
+import asyncio
 from dotenv import load_dotenv
 from anthropic import Anthropic
 
@@ -11,14 +12,15 @@ class AnthropicClient:
             raise Exception("ANTHROPIC_API_KEY environment variable not set")
         self.client = Anthropic(api_key=self.api_key)
 
-    def generate_text(self, prompt):
+    async def generate_text(self, prompt):
         try:
-            response = self.client.messages.create(
-                model="claude-3-sonnet-20240229",
-                max_tokens=1024,
-                messages=[{"role": "user", "content": prompt}]
+            response = await asyncio.to_thread(
+                self.client.completions.create,
+                model="claude-2",
+                max_tokens_to_sample=1024,
+                prompt=f"\n\nHuman: {prompt}\n\nAssistant:",
             )
-            return response.content[0].text
+            return response.completion
         except Exception as e:
             print(f"Error generating text with Anthropic API: {e}")
             return None

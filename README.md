@@ -34,9 +34,9 @@ The generator provides real-time progress updates and detailed error reporting d
 
 - All prose is written in active voice, present tense, avoiding business jargon and superfluous language; economy of words is preferred.
 - Every article is on a topic that serves a purpose, built with assertions, and supported by evidence.
-- When writing a script or markdown document based on an existing file, sanitize any details with obvious dummy names and any parameter values with standard placeholder names.
-- Every generated script includes comments describing its functionality and purpose, along with 1 to 5 labels. Every markdown file is assigned 1 to 5 labels.
-- If scripts or markdown documents require a tagline (a one-sentence high-level summary), it is included as a comment at the top of the script or the document.
+- When writing a script or markdown document based on an existing file, sanitize any details with obvious dummy names and any parameter values with standard placeholder names (e.g., "example_user" instead of actual usernames).
+- Every generated script includes detailed comments describing how the script works and its purpose, along with 1 to 5 descriptive labels. Every markdown file is assigned 1 to 5 relevant labels.
+- If scripts or markdown documents have tagline_required set to true, a one-sentence high-level summary is included as a comment at the top of the script or document.
 
 ## Features
 
@@ -131,6 +131,8 @@ export LMSTUDIO_API_URL=http://localhost:1234 # Replace with your LM Studio serv
 ## Usage
 
 ### Command Line
+
+#### Main Generator
 ```bash
 # Activate virtual environment
 source venv_gemini/bin/activate
@@ -143,10 +145,35 @@ python -m src.generator
 ```
 
 The generator will:
-1. Process all YAML files in source_files/yaml/
-2. Generate new content and diagrams
-3. Show progress for each file
-4. Update package tracking
+1. Process all YAML configuration files
+2. Generate new content based on configurations
+3. Create technical diagrams
+4. Update package tracking information
+5. Save all output to the appropriate directories
+
+#### Script to YAML Utility
+The `script_to_yaml.py` utility automatically generates YAML metadata for Python scripts:
+
+```bash
+# Generate YAML for all new scripts using default paths
+./src/utils/script_to_yaml.py
+
+# Or specify custom paths
+./src/utils/script_to_yaml.py --scripts-dir path/to/scripts --output path/to/output.yaml
+```
+
+The utility will:
+1. Scan the scripts directory for Python files
+2. Load existing YAML entries if any
+3. Process only new scripts that don't have YAML entries yet
+4. Use Gemini to analyze each script and generate metadata:
+   - Description of what the script does
+   - Objective/purpose
+   - Input parameters
+   - Output parameters
+   - Relevant labels from a predefined set
+5. Assign unique PKs for scripts and diagrams
+6. Keep existing entries and append new ones to the output YAML file
 
 ## YAML Configuration Fields
 

@@ -38,7 +38,7 @@ fields:
     name: description
     datatype: string
     example: "This is a highlevel description of the script or article"
-    definition: "This the prompt to generate the new file"
+    definition: "This the prompt to generate the new file, using standard placeholder names for any specific details"
   - id: 9
     name: author
     datatype: string
@@ -48,22 +48,22 @@ fields:
     name: objective
     datatype: string
     example: "This script achieves some end"
-    definition: "helps generate the script"
+    definition: "helps generate the script, using standard placeholder names for any specific details"
   - id: 11
     name: input
     datatype: string
     example: "this goes in"
-    definition: "helps generate the script"
+    definition: "helps generate the script, using standard placeholder names for any specific details"
   - id: 12
     name: process
     datatype: string
     example: "this is happesn to the input"
-    definition: "helps generate the script"
+    definition: "helps generate the script, using standard placeholder names for any specific details"
   - id: 13
     name: output
     datatype: string
     example: "this is the result"
-    definition: "helps generate the script"
+    definition: "helps generate the script, using standard placeholder names for any specific details"
   - id: 14
     name: number_of_diagrams
     datatype: integer
@@ -78,7 +78,7 @@ fields:
     name: tagline_required
     datatype: boolean
     example: 1
-    definition: "Generate the tagline for this script"
+    definition: "If true, include a one-sentence high-level summary as a comment at the top of the file"
   - id: 17
     name: old_filepath
     datatype: string
@@ -93,7 +93,7 @@ fields:
     name: labels
     datatype: array string
     example: "#script, #automation, #platform, #looker"
-    definition: "between 2 and 7 labels"
+    definition: "1 to 5 descriptive labels that categorize the content"
   - id: 20
     name: diagram_#_pk
     datatype: string
@@ -113,7 +113,7 @@ fields:
     name: assertion_#_sentence
     datatype: string
     example: "[assertion_1_sentence] This python script deploys a collections JSON files to stand up a standard instance of Looker."
-    definition: "assertion to help with generation"
+    definition: "assertion to help with generation, using standard placeholder names for any specific details"
   - id: 24
     name: paragraph_per_assertions
     datatype: integer
@@ -149,7 +149,3 @@ fields:
     datatype: array string
     example: "tpdmv, xzc8l, rx8u0, mk234, we23g"
     definition: "pks for this package"
-content_copy
-download
-Use code with caution.
-Yaml

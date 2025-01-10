@@ -48,7 +48,7 @@ class GeminiAPI:
                 )
                 return chat_completion.choices[0].message.content
             elif self.llm == "anthropic":
-                return self.client.generate_text(prompt)
+                return await self.client.generate_text(prompt)
             elif self.llm == "openrouter":
                 return await self.client.generate_text(prompt)
             elif self.llm == "lmstudio":

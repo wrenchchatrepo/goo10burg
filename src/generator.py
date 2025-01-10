@@ -124,7 +124,12 @@ version: {version}
     prompt = f"""{front_matter}
 Generate markdown content for a document titled '{new_filename}' with the following specifications:
 
-Previous version content to reference:
+Requirements:
+1. If referencing any specific names, parameters, or values from the previous version, replace them with standard placeholder names
+2. Include 1-5 labels at the top of the document
+3. If tagline is required, include it as a one-sentence summary at the top
+
+Previous version content to reference (sanitize any specific details):
 {existing_content if existing_content else "No previous version available"}
 
 - Description: {description}
@@ -196,7 +201,21 @@ async def generate_script(config):
         existing_content = ""
 
     prompt = f"""{front_matter}
-Generate script content for a script named '{new_filename}'. The script should have the following description: '{description}'. The objective is '{objective}'. The input parameters are '{input_params}'. The output parameters are '{output_params}'. The language is '{language}'. The following labels should be included: '{labels}'. Here is the content of an existing script that may be helpful:
+Generate script content for a script named '{new_filename}' with the following requirements:
+
+1. Include detailed comments describing how the script works and its purpose
+2. Include 1-5 relevant labels as comments at the top
+3. If tagline is required, include it as a comment at the top
+4. Replace any specific names or parameter values with standard placeholder names
+5. The script should have:
+   - Description: {description}
+   - Objective: {objective}
+   - Input parameters: {input_params}
+   - Output parameters: {output_params}
+   - Language: {language}
+   - Labels: {labels}
+
+Here is the content of an existing script that may be helpful (sanitize any specific details):
 {existing_content}
 """
     print(f"Generating script content for {new_filename}...")
