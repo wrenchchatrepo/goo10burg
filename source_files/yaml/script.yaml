@@ -1,0 +1,64 @@
+- author: dion@wrench.chat
+  description: Read your Looker instance metadata and write it to JSON
+  diagram_1_pk: dmoyl
+  diagram_prompt_1: Please generate a diagram based on the conent of this script
+  existing_filename: get_looker.py
+  generated: 'yes'
+  input: Looker privleges and credentials
+  labels: '#best_practice
+
+    #devops
+
+    #diagram
+
+    #looker
+
+    #platform
+
+    #script'
+  language: python
+  new_filename: get_Looker.py
+  new_filepath: /Users/dionedge/dev/goo10burg/finished_files/scripts
+  number_of_diagrams: '1'
+  objective: Back up your Looker instance content and meta data
+  old_filepath: /Users/dionedge/dev/goo10burg/source_files/scripts
+  output: JSON files
+  pk: coxe4
+  process: GET credentials API endpoint write to JSON
+  tagline_required: '1'
+  type: script
+  update_date: 1/9/2025
+  version: '2'
+  zipfile: "coxe4 \ndmoyl"
+- author: dion@wrench.chat
+  description: Read your JSON files to and restore your Looker instance
+  diagram_1_pk: uuwuh
+  diagram_prompt_1: Please generate a diagram based on the conent of this script
+  existing_filename: deploy_looker.py
+  generated: 'yes'
+  input: JSON files
+  labels: '#best_practice
+
+    #devops
+
+    #diagram
+
+    #looker
+
+    #platform
+
+    #script'
+  language: python
+  new_filename: deploy_looker.py
+  new_filepath: /Users/dionedge/dev/goo10burg/finished_files/scripts
+  number_of_diagrams: '1'
+  objective: Restore a full copy of your Looker instance
+  old_filepath: /Users/dionedge/dev/goo10burg/source_files/scripts
+  output: Looker instance
+  pk: 6ebih
+  process: Read JSON
+  tagline_required: '1'
+  type: script
+  update_date: 1/9/2025
+  version: '2'
+  zipfile: "6ebih \nuuwuh"

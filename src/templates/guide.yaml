@@ -1,0 +1,155 @@
+fields:
+  - id: 1
+    name: pk
+    datatype: string
+    example: tpdmv
+    definition: "5 lowercase alphanumeric chars primary key auto generated"
+  - id: 2
+    name: type
+    datatype: string
+    example: script
+    definition: "script or document"
+  - id: 3
+    name: language
+    datatype: string
+    example: python
+    definition: "language of the generated script"
+  - id: 4
+    name: new_filename
+    datatype: string
+    example: deploy_looker.py
+    definition: "name of the new generated file"
+  - id: 5
+    name: existing_filename
+    datatype: string
+    example: deploy_looker.py
+    definition: "name of the existing file if any"
+  - id: 6
+    name: update_date
+    datatype: date
+    example: today()
+    definition: "date of generation"
+  - id: 7
+    name: version
+    datatype: integer
+    example: 2
+    definition: "previous version + 1"
+  - id: 8
+    name: description
+    datatype: string
+    example: "This is a highlevel description of the script or article"
+    definition: "This the prompt to generate the new file"
+  - id: 9
+    name: author
+    datatype: string
+    example: dion@wrench.chat
+    definition: "email of the author"
+  - id: 10
+    name: objective
+    datatype: string
+    example: "This script achieves some end"
+    definition: "helps generate the script"
+  - id: 11
+    name: input
+    datatype: string
+    example: "this goes in"
+    definition: "helps generate the script"
+  - id: 12
+    name: process
+    datatype: string
+    example: "this is happesn to the input"
+    definition: "helps generate the script"
+  - id: 13
+    name: output
+    datatype: string
+    example: "this is the result"
+    definition: "helps generate the script"
+  - id: 14
+    name: number_of_diagrams
+    datatype: integer
+    example: 1
+    definition: "integers 1 through 3"
+  - id: 15
+    name: diagram_prompt_#
+    datatype: string
+    example: "generate a diagram based on the contents of this file"
+    definition: "prompt for eraser.io api"
+  - id: 16
+    name: tagline_required
+    datatype: boolean
+    example: 1
+    definition: "Generate the tagline for this script"
+  - id: 17
+    name: old_filepath
+    datatype: string
+    example: "/Users/dionedge/dev/goo10burg/source_files/scripts/"
+    definition: "location of existing file if any"
+  - id: 18
+    name: new_filepath
+    datatype: string
+    example: "/Users/dionedge/dev/goo10burg/finished_files/scripts/"
+    definition: "location of new file"
+  - id: 19
+    name: labels
+    datatype: array string
+    example: "#script, #automation, #platform, #looker"
+    definition: "between 2 and 7 labels"
+  - id: 20
+    name: diagram_#_pk
+    datatype: string
+    example: "[diagram_1_pk] xzc8l"
+    definition: "gbr7k"
+  - id: 21
+    name: zipfile
+    datatype: array string
+    example: "tpdmv, xzc8l, rx8u0"
+    definition: "pk of all files associated with this file"
+  - id: 22
+    name: number_assertions
+    datatype: integer
+    example: 1
+    definition: "integers 1 through 2"
+  - id: 23
+    name: assertion_#_sentence
+    datatype: string
+    example: "[assertion_1_sentence] This python script deploys a collections JSON files to stand up a standard instance of Looker."
+    definition: "assertion to help with generation"
+  - id: 24
+    name: paragraph_per_assertions
+    datatype: integer
+    example: 2
+    definition: "integers 1 through 3"
+  - id: 25
+    name: intro_paragraph
+    datatype: boolean
+    example: 0
+    definition: "0 or 1"
+  - id: 26
+    name: concluding_paragraph
+    datatype: boolean
+    example: 0
+    definition: "0 or 1"
+  - id: 27
+    name: total_paragraphs
+    datatype: integer
+    example: 2
+    definition: "(22 x 24) + 25 + 26"
+  - id: 28
+    name: approx_words_per_paragraphs
+    datatype: integer
+    example: 330
+    definition: "integer between 100 and 400"
+  - id: 29
+    name: approx_total_words
+    datatype: integer
+    example: 660
+    definition: "27 x 28"
+  - id: 30
+    name: package
+    datatype: array string
+    example: "tpdmv, xzc8l, rx8u0, mk234, we23g"
+    definition: "pks for this package"
+content_copy
+download
+Use code with caution.
+Yaml

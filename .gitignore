@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Project specific
+config/local_config.yaml
+*.log
+output/
+batch_yaml/
+temp/
+*.csv
+!article_ideas.csv  # Include the sample CSV
+
+# API Keys and Secrets
+*.pem
+*.key
+*.env
+.env.local
+.env.*.local
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.bak
+*.tmp
+*.temp
+
+# Generated content
+generated/
+output/articles/
+output/scripts/
+output/diagrams/
+
+# Debug logs
+debug/
+logs/
+*.log
