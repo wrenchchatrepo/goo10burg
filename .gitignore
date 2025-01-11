@@ -111,6 +111,8 @@ batch_yaml/
 temp/
 *.csv
 !article_ideas.csv  # Include the sample CSV
+source_files/
+docusaurus.md
 
 # API Keys and Secrets
 *.pem
